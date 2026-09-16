@@ -1,12 +1,10 @@
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { HomeHero } from "./sections/HomeHero";
-import { Categories } from "./sections/Categories";
+import { EditorialWoman } from "./sections/EditorialWoman";
 import { EditorialBanner } from "./sections/EditorialBanner";
+import { EditorialMan } from "./sections/EditorialMan";
 import { FeaturedProducts } from "./sections/FeaturedProducts";
-import { WomenCollection } from "./sections/WomenCollection";
-import { MenCollection } from "./sections/MenCollection";
-import { AccessoriesSection } from "./sections/AccessoriesSection";
 import { NewArrivals } from "./sections/NewArrivals";
 import { InstagramSection } from "./sections/InstagramSection";
 import { About } from "./sections/About";
@@ -20,12 +18,10 @@ export default function App() {
 
       <main>
         <HomeHero />
-        <Categories />
+        <EditorialWoman />
         <EditorialBanner />
+        <EditorialMan />
         <FeaturedProducts />
-        <WomenCollection />
-        <MenCollection />
-        <AccessoriesSection />
         <NewArrivals />
         <InstagramSection />
         <About />
