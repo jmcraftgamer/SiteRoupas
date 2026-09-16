@@ -1,11 +1,28 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
-import { instagramPosts } from "../data/instagram";
+import { Image as ImageIcon, ArrowUpRight } from "lucide-react";
 import { store } from "../data/store";
 
-export function InstagramSection() {
+function PlaceholderPost({ label }: { label: string }) {
   return (
-    <section className="py-20 lg:py-28 bg-brand-bg">
+    <div className="aspect-square rounded-xl bg-neutral-100 border-2 border-dashed border-neutral-200 flex flex-col items-center justify-center gap-2">
+      <ImageIcon size={22} className="text-neutral-300" strokeWidth={1.2} />
+      <span className="text-[10px] text-neutral-400 font-medium">{label}</span>
+    </div>
+  );
+}
+
+export function InstagramSection() {
+  const placeholders = [
+    "Post 01",
+    "Post 02",
+    "Post 03",
+    "Post 04",
+    "Post 05",
+    "Post 06",
+  ];
+
+  return (
+    <section className="py-20 lg:py-32 bg-brand-bg">
       <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -17,36 +34,22 @@ export function InstagramSection() {
           <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-brand-pink mb-3">
             @loja_estilo__
           </p>
-          <h2 className="text-3xl md:text-4xl font-serif font-medium max-w-lg mx-auto leading-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-medium max-w-lg mx-auto leading-tight">
             Estilo também se vive fora da loja.
           </h2>
         </motion.div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
-          {instagramPosts.map((post, i) => (
-            <motion.a
-              key={post.id}
-              href={post.link}
-              target="_blank"
-              rel="noopener noreferrer"
+          {placeholders.map((label, i) => (
+            <motion.div
+              key={label}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.4, delay: i * 0.06 }}
-              className="group relative aspect-square rounded-xl overflow-hidden bg-neutral-100"
             >
-              <img
-                src={post.image}
-                alt={post.alt}
-                loading="lazy"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-brand-black/0 group-hover:bg-brand-black/20 transition-colors duration-400 flex items-center justify-center">
-                <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <ArrowUpRight size={20} className="text-white" />
-                </span>
-              </div>
-            </motion.a>
+              <PlaceholderPost label={label} />
+            </motion.div>
           ))}
         </div>
 
@@ -61,7 +64,7 @@ export function InstagramSection() {
             href={store.instagram}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-brand-black/15 text-brand-black text-sm font-medium hover:border-brand-black/40 transition-all duration-300"
+            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-brand-black text-white text-sm font-medium hover:bg-brand-pink hover:text-brand-black transition-all duration-300"
           >
             Ver no Instagram
             <ArrowUpRight size={14} />

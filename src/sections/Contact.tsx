@@ -3,9 +3,12 @@ import { MessageCircle, MapPin, ArrowUpRight } from "lucide-react";
 import { InstagramIcon } from "../components/InstagramIcon";
 import { contact } from "../data/store";
 
+const WHATSAPP_NUMBER = "553181043649";
+const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
+
 export function Contact() {
   return (
-    <section id="contato" className="py-20 lg:py-28 bg-brand-white">
+    <section id="contato" className="py-20 lg:py-32 bg-brand-white">
       <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -17,7 +20,7 @@ export function Contact() {
           <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-brand-pink mb-3">
             Contato
           </p>
-          <h2 className="text-3xl md:text-4xl font-serif font-medium">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-medium">
             Quer falar com a gente?
           </h2>
         </motion.div>
@@ -46,7 +49,7 @@ export function Contact() {
           </motion.a>
 
           <motion.a
-            href={contact.whatsapp || "#"}
+            href={WHATSAPP_LINK}
             target="_blank"
             rel="noopener noreferrer"
             initial={{ opacity: 0, y: 20 }}
@@ -60,7 +63,7 @@ export function Contact() {
             </div>
             <div className="text-center">
               <h4 className="text-sm font-semibold">WhatsApp</h4>
-              <p className="text-xs text-brand-gray mt-1">Enviar mensagem</p>
+              <p className="text-xs text-brand-gray mt-1">(31) 8104-3649</p>
             </div>
             <span className="flex items-center gap-1 text-[11px] font-medium text-brand-pink opacity-0 group-hover:opacity-100 transition-opacity">
               Conversar <ArrowUpRight size={11} />
