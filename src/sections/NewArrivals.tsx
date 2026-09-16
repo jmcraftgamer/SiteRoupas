@@ -19,7 +19,7 @@ export function NewArrivals() {
   ];
 
   return (
-    <section id="novidades" className="py-20 lg:py-32 bg-brand-white">
+    <section id="novidades" className="py-28 lg:py-44 bg-brand-white">
       <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

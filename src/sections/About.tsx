@@ -3,7 +3,7 @@ import { store } from "../data/store";
 
 export function About() {
   return (
-    <section id="sobre" className="py-20 lg:py-32 bg-brand-white">
+    <section id="sobre" className="py-28 lg:py-44 bg-brand-white">
       <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Image */}

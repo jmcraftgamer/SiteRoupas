@@ -8,7 +8,7 @@ const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 export function Contact() {
   return (
-    <section id="contato" className="py-20 lg:py-32 bg-brand-white">
+    <section id="contato" className="py-28 lg:py-44 bg-brand-white">
       <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

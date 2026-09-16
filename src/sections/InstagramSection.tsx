@@ -22,7 +22,7 @@ export function InstagramSection() {
   ];
 
   return (
-    <section className="py-20 lg:py-32 bg-brand-bg">
+    <section className="py-28 lg:py-44 bg-brand-bg">
       <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
